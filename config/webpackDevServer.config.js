@@ -82,6 +82,18 @@ module.exports = function(proxy, allowedHost) {
     public: allowedHost,
     proxy,
     before(app) {
+      const boy = require('../src/api/boy.json');
+      const girl = require('../src/api/girl.json');
+      const pub = require('../src/api/public.json');
+      app.get('/boy', (req, res) => {
+        res.send(boy);
+      });
+      app.get('/girl', (req, res) => {
+        res.send(girl);
+      });
+      app.get('/pub', (req, res) => {
+        res.send(pub);
+      });
       // This lets us open files from the runtime error overlay.
       app.use(errorOverlayMiddleware());
       // This service worker file is effectively a 'no-op' that will reset any

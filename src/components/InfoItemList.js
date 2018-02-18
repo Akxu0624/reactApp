@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './InfoItemList.scss';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+
 class InfoItemList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dataList: this.props.data
-    };
+    this.state = {};
   }
   componentDidMount() {
   }
@@ -18,16 +13,19 @@ class InfoItemList extends Component {
     return (
       <ul className="InfoItemList b-list">
         {
-          this.state.dataList.map(item => (
+          this.props.data.map(item => (
             <li key={item.id}>
-              <Link to='/details'>
+              <Link to={{
+                  pathname: `/details/${item.title}`
+                }}>
                 <div className="b-item-img">
-                  <img src={item.imgSrc}/>
+                  <img src={item.imgSrc} alt={item.title}/>
                 </div>
                 <div className="b-item-right">
                   <div className="b-item-title">{item.title}</div>
                   <p style={{ WebkitBoxOrient: 'vertical'}}>{item.des}</p>
                   <div className="b-item-info">
+                    <i className="icon-read"></i>
                     <span className="b-item-type">{item.type}</span>
                   </div>
                 </div>

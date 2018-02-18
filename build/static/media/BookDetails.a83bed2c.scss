@@ -29,41 +29,26 @@
 				margin-bottom: 8px;
 			}
 			p {
-				display: -webkit-box;
 				width: 100%;
-			    font-size: 0.8rem;
+			    font-size: 0.55rem;
 			    line-height: 20px;
 			    color: #8f8f8f;
 				overflow : hidden;
 				text-overflow: ellipsis;
-				text-align: justify;
+				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
 			}
 			.b-item-info {
-				position: relative;
 				.b-item-type {
-					float: left;
-					display: inline-block;
+					display: block;
 				    max-width: 40%;
-				    margin-left: 4px;
 				    overflow: hidden;
 				    text-overflow: ellipsis;
 				    white-space: nowrap;
 				    color: #8f8f8f;
 				    font-size: 0.7rem;
 				    text-align: left;
-				}
-				.icon-read {
-					float: left;
-				    display: inline-block;
-				    width: 0.8rem;
-				    height: 0.8rem;
-				    left: 0;
-				    background-image: url('../static/img/reader.png');
-				    background-size: cover;
-				    background-repeat: no-repeat;
-				    vertical-align: -2px;
 				}
 			}
 		}
