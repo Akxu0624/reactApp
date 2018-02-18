@@ -7,7 +7,7 @@ import './css/index.css';
 import 'antd-mobile/dist/antd-mobile.css';
 
 ReactDOM.render(
-    <App />, 
+    <App/>, 
     document.getElementById('root')
 );
 registerServiceWorker();
