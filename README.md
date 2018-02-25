@@ -8,7 +8,7 @@ A React.js project （仿QQ浏览器小说-书城界面实现）
   - `react-router-dom` 前端路由
   - `axios` 基于 promise 的 HTTP 库
 - `Webpack` 构建工具
-- `ant-design-mobile` 基于Vue.js的UI组件库
+- `ant-design-mobile` 基于React.js的UI组件库
 
 ## Build Setup
 
